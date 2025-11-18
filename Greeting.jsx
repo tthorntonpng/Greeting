@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 
-function Greeting() {
+/**
+ * Greeting Component
+ * ------------------
+ * A simple interactive component that shows a metallic greeting.
+ * Shows hover animation and a personal message.
+ */
+
+export default function Greeting() {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -21,26 +28,24 @@ function Greeting() {
 
 const styles = {
   container: {
-    padding: "2rem",
-    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh",
+    backgroundColor: "#1a1a1a",
   },
-
-  // Metallic text effect
   title: {
     fontSize: "2rem",
     fontWeight: "bold",
     background: "linear-gradient(90deg, #b8b8b8, #e2e2e2, #b8b8b8)",
     WebkitBackgroundClip: "text",
     color: "transparent",
-    transition: "0.3s ease",
+    transition: "all 0.3s ease",
+    textAlign: "center",
     letterSpacing: "1px",
   },
-
-  // Slight shine on hover
   titleHover: {
     background: "linear-gradient(90deg, #ffffff, #d6d6d6, #ffffff)",
-    transform: "scale(1.03)",
+    transform: "scale(1.05)",
   },
 };
-
-export default Greeting;
