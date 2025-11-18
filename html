@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Junior Dev Greeting</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #1a1a1a;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      background: linear-gradient(145deg, #d4d4d4, #f5f5f5, #b8b8b8, #f5f5f5);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-align: center;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7), -2px -2px 5px rgba(255,255,255,0.2);
+      animation: shine 4s linear infinite;
+      transition: transform 0.3s ease;
+    }
+
+    h1:hover {
+      transform: scale(1.1) rotateX(5deg) rotateY(5deg);
+    }
+
+    /* Glossy metallic animation */
+    @keyframes shine {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="greeting">Hello I am your new Jr Web Developer!</h1>
+
+  <script>
+    // Optional: dynamically update greeting
+    function greet(name) {
+      return `Hello I am your new Jr Web Developer, ${name}!`;
+    }
+
+    const myName = "Lost Files";
+    document.getElementById("greeting").textContent = greet(myName);
+  </script>
+</body>
+</html
